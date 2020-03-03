@@ -1,21 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Projects from './Projects.js';
-import About from './About.js';
-import NavBar from './components/NavBar'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Projects from './Pages/Projects/';
+import About from './Pages/About/';
+import NavBar from './Components/NavBar/';
 import './App.css';
 
 const App = _ =>{
   return (
     <>
     <Router>
-      <NavBar /> 
-      {/* Router */}
-        {/* <Route exact path='/' component={About}/>
-        <Route exact path='/projects' component={Projects}/> */}
-          {/* Links */}
-            {/* <Link href='/' className='item'> About</Link>
-            <Link href='/Projects' className='item'> Projects</Link> */}
+      <NavBar />
+        <Switch>
+          <Route exact path='/' render={_ => (<About />)} />
+          <Route path='/projects' component={Projects}/>
+        </Switch> 
     </Router>
     </>
   )
