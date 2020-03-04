@@ -17,8 +17,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import { findRenderedComponentWithType } from 'react-dom/test-utils';
 
 const drawerWidth = 240;
@@ -86,11 +84,14 @@ const NavBar = _ =>{
     setOpen(false);
   };
 
+  const handleNavTest = _ =>{
+    console.log('ping')
+  }
   return (
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        position="fixed"
+        position="relative"
         style={{ backgroundColor: '#eeeeee' }}
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -127,12 +128,14 @@ const NavBar = _ =>{
         </div>
         <Divider />
         <List>
-          {['Home','About Me', 'Projects', 'Education/Work'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem>
+            {/* <i className='material-icons'>library_books</i> */}
+            <Link to='/' className='' onClick={handleNavTest} ><ListItemText primary='About Me' /></Link>
+          </ListItem>
+          <ListItem>
+            {/* <i className='material-icons'>library_books</i> */}
+            <Link to='/projects' className='' onClick={handleNavTest}><ListItemText primary='Projects' /></Link>
+          </ListItem>
         </List>
       </Drawer>
     </div>
