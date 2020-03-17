@@ -45,6 +45,7 @@ const useStyles = makeStyles(theme =>({
         margin: 'auto',
         width: '100%',
         textAlign: 'center',
+        backgroundColor: 'gray'
       },
       cardTitle:{
           color:'white',
@@ -91,13 +92,25 @@ const Projects = _ =>{
                             <Card className={classes.card}>
                                 <CardContent className={classes.cardMedia}>
                                     <img src='https://safavis.github.io/indecisive/assets/image/logo_ind.png'></img>
-                                    <Typography variant='h4' align='center' className={classes.cardTitle}>
-                                        <Button variant='contained' size="medium" color="default">
-                                            Learn More!
-                                        </Button>
-                                    </Typography>
+                                    <Typography align='center' className={classes.cardTitle}> Indecisive</Typography>
+                                    <Grid container spacing={3}>
+                                        <Grid item md={6} sm={12} xs={12}>
+                                            <Typography align='center'>
+                                                <Button variant='contained' size="small" color="defaulty" align='center'>
+                                                    Demo
+                                                </Button>
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item md={6} sm={12} xs={12}>
+                                        <Typography align='center'>
+                                            <Button variant='contained' size="small" color="primary" align='center'>
+                                                Source Code
+                                            </Button>
+                                        </Typography>
+                                    </Grid>
+                                    </Grid>
                                 </CardContent>
-                                <Grid container spacing={3}>
+                                {/* <Grid container spacing={3}>
                                     <Grid item md={6}>
                                         <Typography align='center'>
                                             <Button size="small" color="defaulty" align='center'>
@@ -112,7 +125,7 @@ const Projects = _ =>{
                                             </Button>
                                         </Typography>
                                     </Grid>
-                                </Grid>
+                                </Grid> */}
                             </Card>
                     </Grid>
                      <Grid item md={3} sm={12} xs={12}>
@@ -125,8 +138,8 @@ const Projects = _ =>{
                             </Card>
                     </Grid>
                     <Grid item md={3} sm={12} xs={12}>
-                            <Card>
-                                <CardContent>
+                            <Card className={classes.card}>
+                                <CardContent className={classes.cardMedia}>
                                     <Typography align='center'>
                                         INDECISIVE
                                     </Typography>
@@ -134,8 +147,8 @@ const Projects = _ =>{
                             </Card>
                     </Grid>
                     <Grid item md={3} sm={12} xs={12}>
-                            <Card>
-                                <CardContent>
+                            <Card className={classes.card}>
+                                <CardContent className={classes.cardMedia}>
                                     <Typography align='center'>
                                         INDECISIVE
                                     </Typography>
@@ -143,8 +156,8 @@ const Projects = _ =>{
                             </Card>
                     </Grid>
                     <Grid item md={3} sm={12} xs={12}>
-                            <Card>
-                                <CardContent>
+                            <Card className={classes.card}>
+                                <CardContent className={classes.cardMedia}>
                                     <Typography align='center'>
                                         INDECISIVE
                                     </Typography>
